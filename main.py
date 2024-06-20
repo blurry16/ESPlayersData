@@ -6,7 +6,7 @@ import time
 
 
 class Jsonfile:
-    """__data__ class contained load and dump methods to work with JSON files more comfy"""
+    """yes. well i just like how it works i'm too lasy to do with open() blocks lol"""
 
     def __init__(self, file_path: str):
         self.file_path = file_path
