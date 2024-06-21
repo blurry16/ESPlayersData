@@ -127,10 +127,9 @@ mapi = API()
 esplayersdata = Jsonfile(ESPLAYERSDATAPATH)
 data = esplayersdata.load()
 
-UUIDSONLY = []
-for i in uuids:
-    UUIDSONLY.append(uuids[i])
-print("\n".join(UUIDSONLY))
+for name in uuids:
+    print(f"{uuids[name]}: {name}")
+
 if input(f"{Fore.MAGENTA}Would you like to update data? y/n: ").lower() in ["y", ""]:
     print(Fore.RESET)
     length = len(data)
