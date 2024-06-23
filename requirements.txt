@@ -1,2 +1,4 @@
 mojang
 colorama
+disnake
+requests
