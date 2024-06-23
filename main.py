@@ -4,6 +4,8 @@ from typing import Union
 import json
 import time
 
+ESPLAYERSDATAPATH = r"C:\Development\Python3\ESPlayersData\es_players_data.json"
+
 
 class Jsonfile:
     """yes. well i just like how it works i'm too lasy to do with open() blocks lol"""
@@ -120,42 +122,45 @@ uuids = {
     "DaddyF1sh": "3ae447f1155242a1ab1f7df994f39ce1",
 }
 
+if __name__ == "__main__":
 
-init(autoreset=True)
+    init(autoreset=True)
 
-ESPLAYERSDATAPATH = r"C:\Development\Python3\ESPlayersData\es_players_data.json"
-mapi = API()
-esplayersdata = Jsonfile(ESPLAYERSDATAPATH)
-data = esplayersdata.load()
+    mapi = API()
+    esplayersdata = Jsonfile(ESPLAYERSDATAPATH)
+    data = esplayersdata.load()
 
-for name in uuids:
-    print(f"{uuids[name]}: {name}")
+    for name in uuids:
+        print(f"{uuids[name]}: {name}")
 
-if input(f"{Fore.MAGENTA}Would you like to update data? y/n: ").lower() in ["y", ""]:
+    if input(f"{Fore.MAGENTA}Would you like to update data? y/n: ").lower() in [
+        "y",
+        "",
+    ]:
+        print(Fore.RESET)
+        length = len(uuids)
+        for index, i in enumerate(uuids):
+            profile = mapi.get_profile(uuids[i])
+            data[profile.id] = {
+                "id": profile.id,
+                "name": profile.name,
+                "is_legacy_profile": profile.is_legacy_profile,
+                "skin_variant": profile.skin_variant,
+                "cape_url": profile.cape_url,
+                "skin_url": profile.skin_url,
+            }
+            print(f"{Fore.GREEN}{profile.name} updated. [{index + 1}/{length}]")
+            print(json.dumps(data[profile.id], indent=2))
+            print("\n")
+            time.sleep(1)
+        del length
+        esplayersdata.dump(data)
+        print(f"{Back.GREEN}Successfully dumped data in {esplayersdata.file_path}")
     print(Fore.RESET)
-    length = len(uuids)
-    for index, i in enumerate(uuids):
-        profile = mapi.get_profile(uuids[i])
-        data[profile.id] = {
-            "id": profile.id,
-            "name": profile.name,
-            "is_legacy_profile": profile.is_legacy_profile,
-            "skin_variant": profile.skin_variant,
-            "cape_url": profile.cape_url,
-            "skin_url": profile.skin_url,
-        }
-        print(f"{Fore.GREEN}{profile.name} updated. [{index + 1}/{length}]")
-        print(json.dumps(data[profile.id], indent=2))
-        print("\n")
-        time.sleep(1)
-    del length
-    esplayersdata.dump(data)
-    print(f"{Back.GREEN}Successfully dumped data in {esplayersdata.file_path}")
-print(Fore.RESET)
-data = esplayersdata.load()
-names = [data[i]["name"] for i in data]
-uuids = {data[i]["name"]: data[i]["id"] for i in data}
-print("\n".join(sorted(names)))
-print(names, end="\n" * 2)
-print(uuids, end="\n" * 2)
-print(len(names), len(data), len(uuids))
+    data = esplayersdata.load()
+    names = [data[i]["name"] for i in data]
+    uuids = {data[i]["name"]: data[i]["id"] for i in data}
+    print("\n".join(sorted(names)))
+    print(names, end="\n" * 2)
+    print(uuids, end="\n" * 2)
+    print(len(names), len(data), len(uuids))
