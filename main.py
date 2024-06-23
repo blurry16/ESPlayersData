@@ -26,13 +26,13 @@ uuids = {
     "blurry16": "ef2b9013f4ca4749b3bfaf83146c538e",
     "cagedFALC0N": "e2cc4960bead4748baa7b25c86ab736d",
     "TatortotLuna": "afcdd440b5cb457490ebaf3ec54f1cff",
-    "Dr_Aves": "e9fd6719be254ac88f0b1ee23e2bcbd6",
+    "AvesWaves_": "e9fd6719be254ac88f0b1ee23e2bcbd6",
     "fredlime": "8eba079e7e9448aa96c06ec4998ab8c3",
     "Goaticecream": "d3288805405d48959423ca25ed532f0c",
     "_kittyxx": "306467712f314e3facb6afde37b33032",
     "MamaCheckers": "39646a36ceb943879f0039bbf0ff9dee",
     "rxyc": "0c217e9b48574e51b7b713c2d7107c9b",
-    "WallyDonkey": "a93d13758ea240cc90a244585776e1d7",
+    "WallyWaves_": "a93d13758ea240cc90a244585776e1d7",
     "BandNerdMama": "ff702ab4ea354dd4b91e0074a86fb908",
     "BooBearCrafter": "91dfd6135a544d2981637bbc4a9b25e1",
     "caught_n_candy": "18117c41cb0c4c49a30a672e60384622",
@@ -59,7 +59,7 @@ uuids = {
     "Lumeriana": "9026cdc093684baf8a3f377f755181d7",
     "MCG8": "218257ec57be43dd8f847d985231bb44",
     "redstone_nub": "13eefe72561c4c0dab02a78c87c24d24",
-    "SunnyDemon202": "d93f3c7af0f041ab9685740ff95810c4",
+    "Dewdrop_Dragon": "d93f3c7af0f041ab9685740ff95810c4",
     "SuperAlexstar": "774aa89977324855aa23bbbe4a6333b6",
     "TiredSoul5": "1fbb1eb9f69f404a965920002794108b",
     "WeatherCats": "50b04546d30c4e0894f9494933c8c8ff",
@@ -93,7 +93,6 @@ uuids = {
     "SkyButNo": "06b1c8234a6f42789b682706982587ef",
     "VictoryMan123": "6559837802d94e2b9439a817dc2992f3",
     "CastleMiner64": "bbf76ec3b59b475aa623e7825c087e4d",
-    "DADFISH": "15085288c169448783d58ffca9e0fec6",
     "EmmaKR": "0a6ff29e74134230be4a83b0151ed237",
     "ItsMeNeon": "95fbb47b89504221aff87f2e8769bfec",
     "mariomilkm": "b16206489f694ee08fdad2b7b1f4343b",
@@ -118,7 +117,9 @@ uuids = {
     "Majest0": "f96ea76ad4644e0ab06fbdd69a696e97",
     "MrSmall8": "b92482d57365443386e08acb855782b6",
     "isorry123": "69e823cd8d2e47b79abeb0c77f078818",
+    "DaddyF1sh": "3ae447f1155242a1ab1f7df994f39ce1",
 }
+
 
 init(autoreset=True)
 
@@ -132,7 +133,7 @@ for name in uuids:
 
 if input(f"{Fore.MAGENTA}Would you like to update data? y/n: ").lower() in ["y", ""]:
     print(Fore.RESET)
-    length = len(data)
+    length = len(uuids)
     for index, i in enumerate(uuids):
         profile = mapi.get_profile(uuids[i])
         data[profile.id] = {
