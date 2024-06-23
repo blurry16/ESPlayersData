@@ -24,6 +24,7 @@ bot = commands.Bot(
 
 mapi = mojang.API()
 
+updates = 0
 
 @bot.event
 async def on_ready():
@@ -38,6 +39,7 @@ async def on_ready():
 
 async def update_data():
     try:
+        global updates
         data = json.loads(requests.get(JSONRAWURL).text)
         await bot.get_channel(COUNTCHANNELID).edit(name=f"{len(data)} players in ES")
         names = []
@@ -49,7 +51,8 @@ async def update_data():
         ).edit(
             content=f"```{tojoin}```\nUpdated <t:{int(time.time())}:R> (<t:{int(time.time())}:f>)\n[GitHub repo](https://github.com/blurry16/ESPlayersData)"
         )
-        print(f"{Fore.GREEN}Data successfully updated at {int(time.time())}.")
+        updates += 1
+        print(f"{Fore.GREEN}Data successfully updated at {int(time.time())}. In sum {updates} update{'s' if updates > 1 else ''} ha{'ve' if updates > 1 else 's'} taken place.")
     except Exception as e:
         print(f"{Fore.RED}Exception {e} occurred.")
 
