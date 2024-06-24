@@ -42,14 +42,12 @@ async def update_data():
         global updates
         data = json.loads(requests.get(JSONRAWURL).text)
         await bot.get_channel(COUNTCHANNELID).edit(name=f"{len(data)} players in ES")
-        names = []
-        for i in data:
-            names.append(mapi.get_username(data[i]["id"]))
+        names = [mapi.get_username(i) for i in data]
         tojoin = "\n".join(sorted(names))
         await bot.get_channel(MEMBERLISTID).get_partial_message(
             MEMBERLISTMESSAGEID
         ).edit(
-            content=f"```{tojoin}```\nUpdated <t:{int(time.time())}:R> (<t:{int(time.time())}:f>)\n[GitHub repo](https://github.com/blurry16/ESPlayersData)"
+            content=f"```\n{tojoin}\n```\nUpdated <t:{int(time.time())}:R> (<t:{int(time.time())}:f>)\n[GitHub repo](https://github.com/blurry16/ESPlayersData)"
         )
         updates += 1
         print(f"{Fore.GREEN}Data successfully updated at {int(time.time())}. In sum {updates} update{'s' if updates > 1 else ''} ha{'ve' if updates > 1 else 's'} taken place.")

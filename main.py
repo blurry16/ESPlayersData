@@ -121,13 +121,13 @@ uuids = {
     "isorry123": "69e823cd8d2e47b79abeb0c77f078818",
     "DaddyF1sh": "3ae447f1155242a1ab1f7df994f39ce1",
 }
+esplayersdata = Jsonfile(ESPLAYERSDATAPATH)
 
 if __name__ == "__main__":
 
     init(autoreset=True)
 
     mapi = API()
-    esplayersdata = Jsonfile(ESPLAYERSDATAPATH)
     data = esplayersdata.load()
 
     for name in uuids:
