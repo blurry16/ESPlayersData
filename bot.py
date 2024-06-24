@@ -7,9 +7,7 @@ from colorama import init, Fore
 from disnake.ext import commands, tasks
 
 TOKEN = ""
-JSONRAWURL = (
-    "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/es_players_data.json"
-)
+JSONRAWURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/uuids.json"
 COUNTCHANNELID = 1254552599210885274
 MEMBERLISTID = 1254554188461903882
 MEMBERLISTMESSAGEID = 1254556785386328136
@@ -26,6 +24,7 @@ mapi = mojang.API()
 
 updates = 0
 
+
 @bot.event
 async def on_ready():
     print(f"{Fore.MAGENTA}Bot {bot.user} is ready!")
@@ -40,9 +39,9 @@ async def on_ready():
 async def update_data():
     try:
         global updates
-        data = json.loads(requests.get(JSONRAWURL).text)
-        await bot.get_channel(COUNTCHANNELID).edit(name=f"{len(data)} players in ES")
-        names = [mapi.get_username(i) for i in data]
+        uuids = json.loads(requests.get(JSONRAWURL).text)
+        await bot.get_channel(COUNTCHANNELID).edit(name=f"{len(uuids)} players in ES")
+        names = [mapi.get_username(i) for i in uuids]
         tojoin = "\n".join(sorted(names))
         await bot.get_channel(MEMBERLISTID).get_partial_message(
             MEMBERLISTMESSAGEID
@@ -50,7 +49,9 @@ async def update_data():
             content=f"```\n{tojoin}\n```\nUpdated <t:{int(time.time())}:R> (<t:{int(time.time())}:f>)\n[GitHub repo](https://github.com/blurry16/ESPlayersData)"
         )
         updates += 1
-        print(f"{Fore.GREEN}Data successfully updated at {int(time.time())}. In sum {updates} update{'s' if updates > 1 else ''} ha{'ve' if updates > 1 else 's'} taken place.")
+        print(
+            f"{Fore.GREEN}Data successfully updated at {int(time.time())}. In sum {updates} update{'s' if updates > 1 else ''} ha{'ve' if updates > 1 else 's'} taken place."
+        )
     except Exception as e:
         print(f"{Fore.RED}Exception {e} occurred.")
 
