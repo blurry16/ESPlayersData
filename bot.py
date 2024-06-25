@@ -11,6 +11,7 @@ JSONRAWURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/uuid
 COUNTCHANNELID = 1254552599210885274
 MEMBERLISTID = 1254554188461903882
 MEMBERLISTMESSAGEID = 1254556785386328136
+ROLEID = 1254744804110241822
 
 init(autoreset=True)
 
@@ -31,9 +32,14 @@ async def on_ready():
     update_task.start()
 
 
-# @bot.slash_command()
-# async def update(ctx):
-#     await update_data(ctx)
+@bot.slash_command(description="Force an update.", dm_permission=False)
+async def update(ctx):
+    if ctx.author.get_role(ROLEID):
+        print(f"{Fore.MAGENTA}{ctx.author} forced an update at {int(time.time())}.")
+        await ctx.send("Update was forced successfully!", ephemeral=True)
+        await update_data()
+    else:
+        await ctx.send("Not enough permissions.", ephemeral=True)
 
 
 async def update_data():
