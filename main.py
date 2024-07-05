@@ -24,8 +24,13 @@ class Jsonfile:
         with open(self.file_path, "w", encoding="UTF-8") as data_file:
             json.dump(data, data_file, indent=indent)
 
+
 esplayersdata = Jsonfile(ESPLAYERSDATAPATH)
-uuids = json.loads(requests.get("https://raw.githubusercontent.com/blurry16/ESPlayersData/main/uuids.json"))
+uuids = json.loads(
+    requests.get(
+        "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/uuids.json"
+    )
+)
 
 
 if __name__ == "__main__":
