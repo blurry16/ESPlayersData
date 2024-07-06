@@ -29,7 +29,7 @@ esplayersdata = Jsonfile(ESPLAYERSDATAPATH)
 uuids = json.loads(
     requests.get(
         "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/uuids.json"
-    )
+    ).text
 )
 
 
@@ -39,10 +39,6 @@ if __name__ == "__main__":
 
     mapi = API()
     data = esplayersdata.load()
-
-    for name in uuids:
-        print(f"{uuids[name]}: {name}")
-
     if input(f"{Fore.MAGENTA}Would you like to update data? y/n: ").lower() in [
         "y",
         "",
@@ -50,7 +46,7 @@ if __name__ == "__main__":
         print(Fore.RESET)
         length = len(uuids)
         for index, i in enumerate(uuids):
-            profile = mapi.get_profile(uuids[i])
+            profile = mapi.get_profile(i)
             data[profile.id] = {
                 "id": profile.id,
                 "name": profile.name,
@@ -69,8 +65,10 @@ if __name__ == "__main__":
     print(Fore.RESET)
     data = esplayersdata.load()
     names = [data[i]["name"] for i in data]
-    uuids = {data[i]["name"]: data[i]["id"] for i in data}
+    uuids_upd_dict = {data[i]["name"]: data[i]["id"] for i in data}
     print("\n".join(sorted(names)))
     print(names, end="\n" * 2)
-    print(uuids, end="\n" * 2)
-    print(len(names), len(data), len(uuids))
+    print(uuids_upd_dict, end="\n" * 2)
+    print(len(names), len(data), len(uuids), end="\n\n")
+    for name in uuids_upd_dict:
+        print(f"{uuids_upd_dict[name]}: {name}")
