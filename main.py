@@ -66,6 +66,7 @@ if __name__ == "__main__":
     data = esplayersdata.load()
     names = [data[i]["name"] for i in data]
     uuids_upd_dict = {data[i]["name"]: data[i]["id"] for i in data}
+    print(json.dumps(data, indent=2))
     print("\n".join(sorted(names)))
     print(names, end="\n" * 2)
     print(uuids_upd_dict, end="\n" * 2)
