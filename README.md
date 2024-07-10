@@ -20,3 +20,6 @@ Updates data and dumps it into file at ESPLAYERSDATAPATH.
 
 #### --push
 Pushes the file update at ESPLAYERSDATAPATH on GitHub. Comment is "es_players_data.json update" by default.
+
+#### --bot || --discord || --discord-bot
+Runs the Discord bot after --update and --push (if they were even launched).
