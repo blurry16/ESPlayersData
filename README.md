@@ -11,3 +11,12 @@ Bot uses the file that is hosted on GitHub.
 
 ### Requirements
 Just clone the repository and do `pip install -r requirements.txt`.  
+
+## main.py argv
+There are only 2 argv in there:
+
+#### --update || --upd
+Updates data and dumps it into file at ESPLAYERSDATAPATH.
+
+#### --push
+Pushes the file update at ESPLAYERSDATAPATH on GitHub. Comment is "es_players_data.json update" by default.
