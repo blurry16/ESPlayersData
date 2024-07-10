@@ -1,6 +1,8 @@
 from mojang import API
 from colorama import Back, Fore, init
 from typing import Union
+from sys import argv
+import os
 import requests
 import json
 import time
@@ -33,16 +35,15 @@ uuids = json.loads(
 )
 
 
+argv = [i.lower() for i in argv]
+
 if __name__ == "__main__":
 
     init(autoreset=True)
 
     mapi = API()
     data = esplayersdata.load()
-    if input(f"{Fore.MAGENTA}Would you like to update data? y/n: ").lower() in [
-        "y",
-        "",
-    ]:
+    if "--update" in argv or "--upd" in argv:
         print(Fore.RESET)
         length = len(uuids)
         for index, i in enumerate(uuids):
@@ -62,8 +63,11 @@ if __name__ == "__main__":
         del length
         esplayersdata.dump(data)
         print(f"{Back.GREEN}Successfully dumped data in {esplayersdata.file_path}")
-    print(Fore.RESET)
     data = esplayersdata.load()
+    if "--push" in argv:
+        os.system(
+            f'cd {os.curdir} && git add {ESPLAYERSDATAPATH} && git commit -m "es_players_data.json update" && git push'
+        )
     names = [data[i]["name"] for i in data]
     uuids_upd_dict = {data[i]["name"]: data[i]["id"] for i in data}
     print(json.dumps(data, indent=2))
