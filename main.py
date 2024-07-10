@@ -21,10 +21,10 @@ class Jsonfile:
         with open(self.file_path, "r", encoding="UTF-8") as data_file:
             return json.load(data_file)
 
-    def dump(self, data: Union[dict, list], indent=4):
+    def dump(self, _data: Union[dict, list], indent=4):
         """dumps selected data to the file"""
         with open(self.file_path, "w", encoding="UTF-8") as data_file:
-            json.dump(data, data_file, indent=indent)
+            json.dump(_data, data_file, indent=indent)
 
 
 esplayersdata = Jsonfile(ESPLAYERSDATAPATH)
@@ -43,6 +43,7 @@ if __name__ == "__main__":
 
     mapi = API()
     data = esplayersdata.load()
+    olddata = esplayersdata.load()
     if "--update" in argv or "--upd" in argv:
         print(Fore.RESET)
         length = len(uuids)
@@ -64,10 +65,6 @@ if __name__ == "__main__":
         esplayersdata.dump(data)
         print(f"{Back.GREEN}Successfully dumped data in {esplayersdata.file_path}")
     data = esplayersdata.load()
-    if "--push" in argv:
-        os.system(
-            f'cd {os.curdir} && git add {ESPLAYERSDATAPATH} && git commit -m "es_players_data.json update" && git push'
-        )
     names = [data[i]["name"] for i in data]
     uuids_upd_dict = {data[i]["name"]: data[i]["id"] for i in data}
     print(json.dumps(data, indent=2))
@@ -77,3 +74,10 @@ if __name__ == "__main__":
     print(len(names), len(data), len(uuids), end="\n\n")
     for name in uuids_upd_dict:
         print(f"{uuids_upd_dict[name]}: {name}")
+    if "--push" not in argv and data != olddata:
+        print(f"{Fore.GREEN}Data was updated. It's ready to be pushed!")
+
+    if "--push" in argv:
+        os.system(
+            f'cd {os.curdir} && git add {ESPLAYERSDATAPATH} && git commit -m "es_players_data.json update" && git push'
+        )
