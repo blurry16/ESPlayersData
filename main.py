@@ -48,7 +48,6 @@ if __name__ == "__main__":
     #     del data[i]["is_legacy_profile"]
     # esplayersdata.dump(data)
     if "--update" in argv or "--upd" in argv:
-        print(Fore.RESET)
         length = len(uuids)
         for index, i in enumerate(uuids):
             profile = mapi.get_profile(i)
@@ -81,7 +80,9 @@ if __name__ == "__main__":
     if "--push" not in argv and data != githubdata:
         print(f"{Fore.GREEN}Data was updated. It's ready to be pushed!")
 
-    if "--push" in argv:
+    elif "--push" in argv and data != githubdata:
         os.system(
             f'cd {os.curdir} && git add {ESPLAYERSDATAPATH} && git commit -m "es_players_data.json update" && git push'
         )
+    else:
+        print(f"{Fore.RED}The data on GitHub is already up to date.")
