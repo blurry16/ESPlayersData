@@ -43,6 +43,11 @@ if __name__ == "__main__":
 
     mapi = API()
     data = esplayersdata.load()
+
+    # for i in data:
+    #     del data[i]["is_legacy_profile"]
+    # esplayersdata.dump(data)
+
     olddata = esplayersdata.load()
     if "--update" in argv or "--upd" in argv:
         print(Fore.RESET)
@@ -52,7 +57,6 @@ if __name__ == "__main__":
             data[profile.id] = {
                 "id": profile.id,
                 "name": profile.name,
-                "is_legacy_profile": profile.is_legacy_profile,
                 "skin_variant": profile.skin_variant,
                 "cape_url": profile.cape_url,
                 "skin_url": profile.skin_url,
