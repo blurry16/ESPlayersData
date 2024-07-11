@@ -8,6 +8,10 @@ import json
 import time
 
 ESPLAYERSDATAPATH = r"C:\Development\Python3\ESPlayersData\es_players_data.json"
+UUIDSURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/uuids.json"
+ESPLAYERSDATAURL = (
+    "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/es_players_data.json"
+)
 
 
 class Jsonfile:
@@ -28,11 +32,7 @@ class Jsonfile:
 
 
 esplayersdata = Jsonfile(ESPLAYERSDATAPATH)
-uuids = json.loads(
-    requests.get(
-        "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/uuids.json"
-    ).text
-)
+uuids = json.loads(requests.get(UUIDSURL).text)
 
 
 argv = [i.lower() for i in argv]
@@ -47,8 +47,6 @@ if __name__ == "__main__":
     # for i in data:
     #     del data[i]["is_legacy_profile"]
     # esplayersdata.dump(data)
-
-    olddata = esplayersdata.load()
     if "--update" in argv or "--upd" in argv:
         print(Fore.RESET)
         length = len(uuids)
@@ -78,7 +76,9 @@ if __name__ == "__main__":
     print(len(names), len(data), len(uuids), end="\n\n")
     for name in uuids_upd_dict:
         print(f"{uuids_upd_dict[name]}: {name}")
-    if "--push" not in argv and data != olddata:
+
+    githubdata = json.loads(requests.get(ESPLAYERSDATAURL).text)
+    if "--push" not in argv and data != githubdata:
         print(f"{Fore.GREEN}Data was updated. It's ready to be pushed!")
 
     if "--push" in argv:
