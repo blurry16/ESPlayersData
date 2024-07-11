@@ -100,7 +100,7 @@
         "name": "caught_n_candy",
         "is_legacy_profile": false,
         "skin_variant": "slim",
-        "cape_url": "http://textures.minecraft.net/texture/2340c0e03dd24a11b15a8b33c2a7e9e32abb2051b2481d0ba7defd635ca7a933",
+        "cape_url": null,
         "skin_url": "http://textures.minecraft.net/texture/1f0ce5708f2bed5bf906296a842677688f79e497ee1d494b534cf708abba80"
     },
     "4ebbebbdfbcb4108ae055bbbbaf01856": {
@@ -341,7 +341,7 @@
         "is_legacy_profile": false,
         "skin_variant": "slim",
         "cape_url": null,
-        "skin_url": "http://textures.minecraft.net/texture/d19edd52d82fbe4b385637794b682da48b490b80ac4caa74963edbd6bf83efbf"
+        "skin_url": "http://textures.minecraft.net/texture/4ca72e8289f58cb3d91df216eaf514dbde282369c6911c97e18506913419da5d"
     },
     "47c7823e725546f49f8f36a32c26594b": {
         "id": "47c7823e725546f49f8f36a32c26594b",
