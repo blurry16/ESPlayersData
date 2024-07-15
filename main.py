@@ -65,7 +65,7 @@ if __name__ == "__main__":
         del length
         esplayersdata.dump(data)
         print(f"{Back.GREEN}Successfully dumped data in {esplayersdata.file_path}")
-    data = esplayersdata.load()
+    data: dict = esplayersdata.load()
     names = [data[i]["name"] for i in data]
     uuids_upd_dict = {data[i]["name"]: data[i]["id"] for i in data}
     print(json.dumps(data, indent=2))
@@ -76,7 +76,7 @@ if __name__ == "__main__":
     for name in uuids_upd_dict:
         print(f"{uuids_upd_dict[name]}: {name}")
 
-    githubdata = json.loads(requests.get(ESPLAYERSDATAURL).text)
+    githubdata: dict = json.loads(requests.get(ESPLAYERSDATAURL).text)
     if "--push" not in argv and data != githubdata:
         print(f"{Fore.GREEN}Data was updated. It's ready to be pushed!")
 
