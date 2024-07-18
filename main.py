@@ -8,8 +8,8 @@ from typing import Union
 from sys import argv
 from pathlib import Path
 
-ESPLAYERSDATAPATH = Path(r"C:\Development\Python3\ESPlayersData\es_players_data.json")                   # PATH
-UUIDSURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/uuids.json"                    # URL
+ESPLAYERSDATAPATH = Path(r"C:\Development\Python3\ESPlayersData\es_players_data.json")  # PATH
+UUIDSURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/uuids.json"  # URL
 ESPLAYERSDATAURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/es_players_data.json"  # URL
 
 
@@ -17,14 +17,14 @@ class JsonFile:
     """yes. well I just like how it works I'm too lasy to do with open() blocks lol"""
 
     def __init__(self, file_path: Path):
-        self.file_path = file_path
+        self.file_path: Path = file_path
 
     def load(self) -> Union[dict, list]:
         """loads data from json file"""
         with open(self.file_path, "r", encoding="UTF-8") as data_file:
             return json.load(data_file)
 
-    def dump(self, _data: Union[dict, list], indent=4) -> None:
+    def dump(self, _data: Union[dict, list], indent: int = 4) -> None:
         """dumps selected data to the file"""
         with open(self.file_path, "w", encoding="UTF-8") as data_file:
             json.dump(_data, data_file, indent=indent)
