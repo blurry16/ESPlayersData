@@ -6,12 +6,12 @@ import mojang
 from colorama import init, Fore
 from disnake.ext import commands, tasks
 
-TOKEN = ""
-JSONRAWURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/uuids.json"
-COUNTCHANNELID = 1254552599210885274
-MEMBERLISTID = 1254554188461903882
-MEMBERLISTMESSAGEID = 1254556785386328136
-ROLEID = 1254744804110241822
+TOKEN: str = ""  # Discord bot token
+JSONRAWURL: str = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/uuids.json"  # UUIDs list RAW url
+COUNTCHANNELID: int = 0  # ID of "X players in ES" channel
+MEMBERLISTID: int = 0  # ID of member list channel
+MEMBERLISTMESSAGEID: int = 0  # ID of member list message
+ROLEID: int = 0  # ID of the role with permission to force updates
 
 init(autoreset=True)
 
