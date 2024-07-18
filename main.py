@@ -1,23 +1,22 @@
-from mojang import API
-from colorama import Back, Fore, init
-from typing import Union
-from sys import argv
 import os
 import requests
 import json
 import time
+from mojang import API
+from colorama import Back, Fore, init
+from typing import Union
+from sys import argv
+from pathlib import Path
 
-ESPLAYERSDATAPATH = r"C:\Development\Python3\ESPlayersData\es_players_data.json"
-UUIDSURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/uuids.json"
-ESPLAYERSDATAURL = (
-    "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/es_players_data.json"
-)
+ESPLAYERSDATAPATH = Path(r"C:\Development\Python3\ESPlayersData\es_players_data.json")
+UUIDSURL = Path("https://raw.githubusercontent.com/blurry16/ESPlayersData/main/uuids.json")
+ESPLAYERSDATAURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/es_players_data.json"
 
 
-class Jsonfile:
-    """yes. well i just like how it works i'm too lasy to do with open() blocks lol"""
+class JsonFile:
+    """yes. well I just like how it works I'm too lasy to do with open() blocks lol"""
 
-    def __init__(self, file_path: str):
+    def __init__(self, file_path: Path):
         self.file_path = file_path
 
     def load(self) -> Union[dict, list]:
@@ -31,9 +30,8 @@ class Jsonfile:
             json.dump(_data, data_file, indent=indent)
 
 
-esplayersdata = Jsonfile(ESPLAYERSDATAPATH)
+esplayersdata = JsonFile(ESPLAYERSDATAPATH)
 uuids = json.loads(requests.get(UUIDSURL).text)
-
 
 argv = [i.lower() for i in argv]
 
