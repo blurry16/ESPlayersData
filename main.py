@@ -8,9 +8,9 @@ from typing import Union
 from sys import argv
 from pathlib import Path
 
-ESPLAYERSDATAPATH = Path(r"C:\Development\Python3\ESPlayersData\es_players_data.json")
-UUIDSURL = Path("https://raw.githubusercontent.com/blurry16/ESPlayersData/main/uuids.json")
-ESPLAYERSDATAURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/es_players_data.json"
+ESPLAYERSDATAPATH = Path(r"C:\Development\Python3\ESPlayersData\es_players_data.json")                   # PATH
+UUIDSURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/uuids.json"                    # URL
+ESPLAYERSDATAURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/es_players_data.json"  # URL
 
 
 class JsonFile:
@@ -24,7 +24,7 @@ class JsonFile:
         with open(self.file_path, "r", encoding="UTF-8") as data_file:
             return json.load(data_file)
 
-    def dump(self, _data: Union[dict, list], indent=4):
+    def dump(self, _data: Union[dict, list], indent=4) -> None:
         """dumps selected data to the file"""
         with open(self.file_path, "w", encoding="UTF-8") as data_file:
             json.dump(_data, data_file, indent=indent)
