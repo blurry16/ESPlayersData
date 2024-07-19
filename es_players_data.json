@@ -123,7 +123,7 @@
         "name": "PookieCrafter",
         "skin_variant": "slim",
         "cape_url": "http://textures.minecraft.net/texture/afd553b39358a24edfe3b8a9a939fa5fa4faa4d9a9c3d6af8eafb377fa05c2bb",
-        "skin_url": "http://textures.minecraft.net/texture/9dede813b3187ef5bfe44930b9ed66f26a30d02ef10e8aabaa9147a35112e253"
+        "skin_url": "http://textures.minecraft.net/texture/4119c24c4c5e3c6afb42340b5ce3c60278fa1360e669dbd9e8f1b9bcb36a827a"
     },
     "a9c47d52a71a4b5580bc120894b69d0b": {
         "id": "a9c47d52a71a4b5580bc120894b69d0b",
@@ -283,7 +283,7 @@
         "id": "d1d7b35861ec4a0ab617e6d1c538cb70",
         "name": "101Wolves",
         "skin_variant": "slim",
-        "cape_url": "http://textures.minecraft.net/texture/cd9d82ab17fd92022dbd4a86cde4c382a7540e117fae7b9a2853658505a80625",
+        "cape_url": null,
         "skin_url": "http://textures.minecraft.net/texture/e58c1c5ba0304cdcfef08d057330667c032e3fdd500599ed07cd3c3c629712fc"
     },
     "86000bb940b74ab995e0cf2c81a2f41a": {
@@ -298,7 +298,7 @@
         "name": "Cherilee",
         "skin_variant": "slim",
         "cape_url": null,
-        "skin_url": "http://textures.minecraft.net/texture/9cbe76c9e5a798071d225cb5dde0973157561b696ab6118e2e0a7a818eeb4433"
+        "skin_url": "http://textures.minecraft.net/texture/1e4b93964bb221ab0158e909ebdf5112cebc99b75c589ba42079840d9d44fe63"
     },
     "47c7823e725546f49f8f36a32c26594b": {
         "id": "47c7823e725546f49f8f36a32c26594b",
@@ -429,9 +429,9 @@
     "cf66e16189a74e329325e3e077233af0": {
         "id": "cf66e16189a74e329325e3e077233af0",
         "name": "MarxTheGamer",
-        "skin_variant": "classic",
+        "skin_variant": "slim",
         "cape_url": null,
-        "skin_url": "http://textures.minecraft.net/texture/1e9ee5b9567d3a5b84d27975247276917d6ad9028218ff1abe83aa081029c3a9"
+        "skin_url": "http://textures.minecraft.net/texture/4b10b31376025e0c6fb2505237997c5d3c5fa0f94390b877ccc59ed20cc1932c"
     },
     "76c5ef0068594e8cbd41fc78f8fdeec1": {
         "id": "76c5ef0068594e8cbd41fc78f8fdeec1",
