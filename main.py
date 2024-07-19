@@ -59,7 +59,7 @@ if __name__ == "__main__":
             print(f"{Fore.GREEN}{profile.name} updated. [{index + 1}/{length}]")
             print(json.dumps(data[profile.id], indent=2))
             print("\n")
-            time.sleep(1)
+            time.sleep(0.25)
         del length
         esplayersdata.dump(data)
         print(f"{Back.GREEN}Successfully dumped data in {esplayersdata.file_path}")
