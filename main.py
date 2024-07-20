@@ -8,9 +8,14 @@ from typing import Union
 from sys import argv
 from pathlib import Path
 
-ESPLAYERSDATAPATH = Path(r"/data/es_players_data.json")  # PATH
+# Paths
+ESPLAYERSDATAPATH = Path(r"data/es_players_data.json")
+COMMITCOUNTERPATH = Path("data/es_players_data_commit_counter.txt")
+
+# URLs
 UUIDSURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/data/uuids.json"  # URL
 ESPLAYERSDATAGITHUBURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/data/es_players_data.json"  # URL
+COMMITCOUNTERURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/data/es_players_data_commit_counter.txt"
 
 
 class JsonFile:
@@ -79,8 +84,17 @@ if __name__ == "__main__":
         print(f"{Fore.GREEN}Data was updated. It's ready to be pushed!")
 
     elif "--push" in argv and data != githubdata:
+        with open(COMMITCOUNTERPATH, "r") as file:
+            count = int(file.read())
+        with open(COMMITCOUNTERPATH, "w") as file:
+            file.write(str(count + 1))
         os.system(
-            f'cd {os.curdir} && git add {ESPLAYERSDATAPATH} && git commit -m "es_players_data.json update" && git push'
+            f'cd {os.curdir} '
+            f'&& git add {ESPLAYERSDATAPATH} '
+            f'&& git add {COMMITCOUNTERPATH} '
+            f'&& git commit -m "es_players_data.json update №{open(COMMITCOUNTERPATH, "r").read()}" '
+            f'&& git push'
         )
     else:
         print(f"{Fore.RED}The data on GitHub is already up to date.")
+    print(f"In sum {requests.get(url=COMMITCOUNTERURL).text} updates of es_players_data.json have taken place.")
