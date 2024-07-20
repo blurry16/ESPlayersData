@@ -13,8 +13,8 @@ ESPLAYERSDATAPATH = Path(r"data/es_players_data.json")
 COMMITCOUNTERPATH = Path("data/es_players_data_commit_counter.txt")
 
 # URLs
-UUIDSURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/data/uuids.json"  # URL
-ESPLAYERSDATAGITHUBURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/data/es_players_data.json"  # URL
+UUIDSURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/data/uuids.json"
+ESPLAYERSDATAGITHUBURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/data/es_players_data.json"
 COMMITCOUNTERURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/data/es_players_data_commit_counter.txt"
 
 
