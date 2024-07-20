@@ -8,9 +8,9 @@ from typing import Union
 from sys import argv
 from pathlib import Path
 
-ESPLAYERSDATAPATH = Path(r"C:\Development\Python3\ESPlayersData\es_players_data.json")  # PATH
-UUIDSURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/uuids.json"  # URL
-ESPLAYERSDATAURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/es_players_data.json"  # URL
+ESPLAYERSDATAPATH = Path(r"/data/es_players_data.json")  # PATH
+UUIDSURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/data/uuids.json"  # URL
+ESPLAYERSDATAGITHUBURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/data/es_players_data.json"  # URL
 
 
 class JsonFile:
@@ -74,7 +74,7 @@ if __name__ == "__main__":
     for name in uuids_upd_dict:
         print(f"{uuids_upd_dict[name]}: {name}")
 
-    githubdata: dict = json.loads(requests.get(ESPLAYERSDATAURL).text)
+    githubdata: dict = json.loads(requests.get(ESPLAYERSDATAGITHUBURL).text)
     if "--push" not in argv and data != githubdata:
         print(f"{Fore.GREEN}Data was updated. It's ready to be pushed!")
 

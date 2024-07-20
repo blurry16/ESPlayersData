@@ -7,7 +7,7 @@ from colorama import init, Fore
 from disnake.ext import commands, tasks
 
 TOKEN: str = ""  # Discord bot token
-JSONRAWURL: str = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/uuids.json"  # UUIDs list RAW url
+JSONRAWURL: str = "https://raw.githubusercontent.com/blurry16/ESPlayersData/main/data/uuids.json"  # UUIDs list RAW url
 COUNTCHANNELID: int = 0  # ID of "X players in ES" channel
 MEMBERLISTID: int = 0  # ID of member list channel
 MEMBERLISTMESSAGEID: int = 0  # ID of member list message
