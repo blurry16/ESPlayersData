@@ -78,6 +78,7 @@ if __name__ == "__main__":
     print(len(names), len(data), len(uuids), end="\n\n")
     for name in uuids_upd_dict:
         print(f"{uuids_upd_dict[name]}: {name}")
+    print()
 
     githubdata: dict = json.loads(requests.get(ESPLAYERSDATAGITHUBURL).text)
     if "--push" not in argv and data != githubdata:
@@ -97,7 +98,7 @@ if __name__ == "__main__":
         )
     else:
         print(f"{Fore.RED}The data on GitHub is already up to date.")
-    print(f"By GitHub RAW file, {requests.get(url=COMMITCOUNTERURL).text} "
+    print(f"\nBy GitHub RAW file, {Fore.GREEN + requests.get(url=COMMITCOUNTERURL).text + Fore.RESET} "
           f"updates of es_players_data.json have taken place.")
-    print(f"By local file, {open(COMMITCOUNTERPATH, 'r').read()} "
+    print(f"By local file, {Fore.GREEN + open(COMMITCOUNTERPATH, 'r').read() + Fore.RESET} "
           f"updates of es_players_data.json have taken place.")
