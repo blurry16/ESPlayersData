@@ -20,4 +20,4 @@ There are only 2 argv in there:
 Updates data and dumps it into file at ESPLAYERSDATAPATH.
 
 #### --push
-Pushes the file update at ESPLAYERSDATAPATH on GitHub. Comment is "es_players_data.json update" by default.
+Pushes the file update at ESPLAYERSDATAPATH on GitHub. Comment is "es_players_data.json update №X" by default.
