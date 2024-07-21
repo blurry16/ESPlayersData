@@ -1,8 +1,9 @@
-import disnake
-import requests
 import json
 import time
+
+import disnake
 import mojang
+import requests
 from colorama import init, Fore
 from disnake.ext import commands, tasks
 

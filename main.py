@@ -1,12 +1,13 @@
-import os
-import requests
 import json
+import os
 import time
-from mojang import API
-from colorama import Back, Fore, init
-from typing import Union
-from sys import argv
 from pathlib import Path
+from sys import argv
+from typing import Union
+
+import requests
+from colorama import Back, Fore, init
+from mojang import API
 
 # Paths
 ESPLAYERSDATAPATH = Path(r"data/es_players_data.json")
