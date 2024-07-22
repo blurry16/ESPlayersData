@@ -28,13 +28,13 @@ updates = 0
 
 
 @bot.event
-async def on_ready():
+async def on_ready() -> None:
     print(f"{Fore.MAGENTA}Bot {bot.user} is ready!")
     update_task.start()
 
 
 @bot.slash_command(description="Force an update.", dm_permission=False)
-async def update(ctx):
+async def update(ctx: disnake.ApplicationCommandInteraction) -> None:
     if ctx.author.get_role(ROLEID):
         print(f"{Fore.MAGENTA}{ctx.author} forced an update at {int(time.time())}.")
         await ctx.send("Update was forced successfully!", ephemeral=True)
@@ -43,7 +43,7 @@ async def update(ctx):
         await ctx.send("Not enough permissions.", ephemeral=True)
 
 
-async def update_data():
+async def update_data() -> None:
     try:
         global updates
         uuids = json.loads(requests.get(JSONRAWURL).text)
@@ -66,7 +66,7 @@ async def update_data():
 
 
 @tasks.loop(minutes=15)
-async def update_task():
+async def update_task() -> None:
     await update_data()
 
 
