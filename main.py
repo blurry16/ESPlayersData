@@ -3,7 +3,6 @@ import os
 import time
 from pathlib import Path
 from sys import argv
-from typing import Union
 
 import requests
 from colorama import Back, Fore, init
@@ -25,12 +24,12 @@ class JsonFile:
     def __init__(self, file_path: Path):
         self.file_path: Path = file_path
 
-    def load(self) -> Union[dict, list]:
+    def load(self) -> dict | list:
         """loads data from json file"""
         with open(self.file_path, "r", encoding="UTF-8") as data_file:
             return json.load(data_file)
 
-    def dump(self, _data: Union[dict, list], indent: int = 4) -> None:
+    def dump(self, _data: dict | list, indent: int = 2) -> None:
         """dumps selected data to the file"""
         with open(self.file_path, "w", encoding="UTF-8") as data_file:
             json.dump(_data, data_file, indent=indent)
