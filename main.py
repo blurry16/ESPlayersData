@@ -19,7 +19,7 @@ COMMITCOUNTERURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/mai
 
 
 class JsonFile:
-    """yes. well I just like how it works I'm too lasy to do with open() blocks lol"""
+    """yes. well, I just like how it works I'm too lasy to do with open() blocks lol"""
 
     def __init__(self, file_path: Path):
         self.file_path: Path = file_path
