@@ -47,9 +47,6 @@ if __name__ == "__main__":
     mapi = API()
     data = esplayersdata.load()
 
-    # for i in data:
-    #     del data[i]["is_legacy_profile"]
-    # esplayersdata.dump(data)
     if "--update" in argv or "--upd" in argv:
         length = len(uuids)
         for index, i in enumerate(uuids):
