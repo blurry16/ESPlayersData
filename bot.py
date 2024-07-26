@@ -34,13 +34,13 @@ async def on_ready() -> None:
 
 
 @bot.slash_command(description="Force an update.", dm_permission=False)
-async def update(ctx: disnake.ApplicationCommandInteraction) -> None:
-    if ctx.author.get_role(ROLEID):
-        print(f"{Fore.MAGENTA}{ctx.author} forced an update at {int(time.time())}.")
-        await ctx.send("Update was forced successfully!", ephemeral=True)
+async def update(inter: disnake.ApplicationCommandInteraction) -> None:
+    if inter.author.get_role(ROLEID):
+        print(f"{Fore.MAGENTA}{inter.author} forced an update at {int(time.time())}.")
+        await inter.send("Update was forced successfully!", ephemeral=True)
         await update_data()
     else:
-        await ctx.send("Not enough permissions.", ephemeral=True)
+        await inter.send("Not enough permissions.", ephemeral=True)
 
 
 async def update_data() -> None:
