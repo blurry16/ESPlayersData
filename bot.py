@@ -48,7 +48,12 @@ async def update_data() -> None:
         global updates
         uuids = json.loads(requests.get(JSONRAWURL).text)
         await bot.get_channel(COUNTCHANNELID).edit(name=f"{len(uuids)} players in ES")
-        names = [mapi.get_username(i) for i in uuids]
+        names = []
+        for index, uuid in enumerate(uuids):
+            username = mapi.get_username(uuid)
+            names.append(username)
+            print(f"[{index + 1}/{len(uuids)}] {uuid} -> {Fore.GREEN}{username}")
+        del username
         tojoin = "\n".join(sorted(names))
         await bot.get_channel(MEMBERLISTID).get_partial_message(
             MEMBERLISTMESSAGEID
