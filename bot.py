@@ -53,7 +53,7 @@ async def update_data() -> None:
             username = mapi.get_username(uuid)
             names.append(username)
             print(f"[{index + 1}/{len(uuids)}] {uuid} -> {Fore.GREEN}{username}")
-        del username
+        del username, uuid
         tojoin = "\n".join(sorted(names))
         await bot.get_channel(MEMBERLISTID).get_partial_message(
             MEMBERLISTMESSAGEID
