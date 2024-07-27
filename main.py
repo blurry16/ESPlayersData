@@ -47,7 +47,7 @@ if __name__ == "__main__":
     mapi = API()
     data = esplayersdata.load()
 
-    if "--update" in argv or "--upd" in argv:
+    if "--update" in argv or "--upd" in argv or "-u" in argv:
         length = len(uuids)
         for index, i in enumerate(uuids):
             profile = mapi.get_profile(i)
@@ -61,7 +61,7 @@ if __name__ == "__main__":
             print(f"{Fore.GREEN}{profile.name} updated. [{index + 1}/{length}]")
             print(json.dumps(data[profile.id], indent=2))
             print("\n")
-            time.sleep(0.25)
+            time.sleep(0 if "--no-cooldown" in argv else 0.25)
         del length
         esplayersdata.dump(data)
         print(f"{Back.GREEN}Successfully dumped data in {esplayersdata.file_path}")
@@ -78,10 +78,10 @@ if __name__ == "__main__":
     print()
 
     githubdata: dict = json.loads(requests.get(ESPLAYERSDATAGITHUBURL).text)
-    if "--push" not in argv and data != githubdata:
+    if "--push" not in argv and "-p" not in argv and data != githubdata:
         print(f"{Fore.GREEN}Data was updated. It's ready to be pushed!")
 
-    elif "--push" in argv and data != githubdata:
+    elif ("--push" in argv or "-p" in argv) and data != githubdata:
         with open(COMMITCOUNTERPATH, "r") as file:
             count = int(file.read())
         with open(COMMITCOUNTERPATH, "w") as file:
