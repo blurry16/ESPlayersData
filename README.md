@@ -10,11 +10,11 @@ Old versions can be obtained at github.com/blurry16/MCDataCollector commits hist
 
 So, at least for now you will have to put player's UUID in the uuids.json file.  
 Fork the repository, edit the file, and pull request updated version of the file.  
-Bot uses the file that is hosted on GitHub.
+Bot uses the file hosted on GitHub.
 
 ### Requirements
 
-Just clone the repository and do `pip install -r requirements.txt`.
+Clone the repository and do `pip install -r requirements.txt`.
 
 ## main.py argv
 
