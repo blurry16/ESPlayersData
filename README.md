@@ -28,6 +28,6 @@ Updates data and dumps it into file at ESPLAYERSDATAPATH.
 
 Push the file update at ESPLAYERSDATAPATH on GitHub. Comment is "es_players_data.json update №X" by default.
 
-#### --no-cooldown
+#### --no-cooldown || -nc
 
 Removes cooldown while updating. Works only with --update.
