@@ -185,7 +185,7 @@
     "id": "2189cb846173457f8526f622526e4ec0",
     "name": "Tisjstme",
     "skin_variant": "classic",
-    "cape_url": null,
+    "cape_url": "http://textures.minecraft.net/texture/cb40a92e32b57fd732a00fc325e7afb00a7ca74936ad50d8e860152e482cfbde",
     "skin_url": "http://textures.minecraft.net/texture/719f5ffbe512465d9024a3db93aa65f269311f6bce2b923bc55409837db9daa9"
   },
   "1572c9fda57242e5b3532bf488c0459b": {
@@ -676,6 +676,6 @@
     "name": "Creeperdoom2",
     "skin_variant": "classic",
     "cape_url": null,
-    "skin_url": "http://textures.minecraft.net/texture/8347ea80beeb280f6cb98089038b1355c318839a6e528a402ce82a45b7097344"
+    "skin_url": "http://textures.minecraft.net/texture/e43fd3213ee28139c29eb584837db7360eac1a2bc75035b025736696ba1dfcf5"
   }
 }
