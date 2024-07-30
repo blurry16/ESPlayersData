@@ -214,7 +214,7 @@
     "name": "DripstoneCrafter",
     "skin_variant": "slim",
     "cape_url": "http://textures.minecraft.net/texture/cd9d82ab17fd92022dbd4a86cde4c382a7540e117fae7b9a2853658505a80625",
-    "skin_url": "http://textures.minecraft.net/texture/4cb03141d267e9e5631728aa364ccb44de356a662cc98f58b0cb9adbe1590edd"
+    "skin_url": "http://textures.minecraft.net/texture/b18ab1c39ec26f9be220947b32bc94189aea7285732eb30f6d82449b1ecf6b10"
   },
   "a790f13a6b76484c907a5e81bfcaaf87": {
     "id": "a790f13a6b76484c907a5e81bfcaaf87",
@@ -298,7 +298,7 @@
     "name": "Cherilee",
     "skin_variant": "slim",
     "cape_url": null,
-    "skin_url": "http://textures.minecraft.net/texture/6ee89dcfdf1f194631de34be2a677a258d63f55177ce3f0251bb37cfa9f30a3"
+    "skin_url": "http://textures.minecraft.net/texture/2fae83e7fd4dc23a755935f912904aa3fa3d940fc1f4a73213fc06bbe7dc7ef0"
   },
   "47c7823e725546f49f8f36a32c26594b": {
     "id": "47c7823e725546f49f8f36a32c26594b",
@@ -443,9 +443,9 @@
   "ee8ddd562c574872933e582c928acc00": {
     "id": "ee8ddd562c574872933e582c928acc00",
     "name": "less_more",
-    "skin_variant": "classic",
+    "skin_variant": "slim",
     "cape_url": null,
-    "skin_url": "http://textures.minecraft.net/texture/31f477eb1a7beee631c2ca64d06f8f68fa93a3386d04452ab27f43acdf1b60cb"
+    "skin_url": "http://textures.minecraft.net/texture/37462be993eb60a64c5a6a7250a7ea2a6577ea82d1635405d5427f79deb1654a"
   },
   "4566c69b8557440a82330d9f2e599e94": {
     "id": "4566c69b8557440a82330d9f2e599e94",
