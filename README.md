@@ -16,18 +16,13 @@ Bot uses the file hosted on GitHub.
 
 Clone the repository and do `pip install -r requirements.txt`.
 
-## main.py argv
-
-There are only 2 argv in there:
-
-#### -u || --update || --upd
-
-Updates data and dumps it into file at ESPLAYERSDATAPATH.
-
-#### -p || --push
-
-Push the file update at ESPLAYERSDATAPATH on GitHub. Comment is "es_players_data.json update №X" by default.
-
-#### -nc || --no-cooldown 
-
-Removes cooldown while updating. Works only with --update.
+<details>
+    <summary> <h2> main.py args </h2> </summary>
+    There are only 2 args in there:
+    <h4> -u || --update || --upd </h4>
+    Updates data and dumps it into file at ESPLAYERSDATAPATH.
+    <h4> -p || --push </h4>
+    Push the file update at ESPLAYERSDATAPATH on GitHub.  Comment is "es_players_data.json update №X" by default.
+    <h4> -nc || --no-cooldown </h4> 
+    Removes cooldown while updating. Works only with --update.
+</details>
