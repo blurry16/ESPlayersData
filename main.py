@@ -19,20 +19,20 @@ COMMITCOUNTERURL = "https://raw.githubusercontent.com/blurry16/ESPlayersData/mai
 
 
 class JsonFile:
-    """yes. well, I just like how it works I'm too lasy to do with open() blocks lol"""
+    """JsonFile class contains required methods to work with .json files"""
 
-    def __init__(self, file_path: Path):
-        self.file_path: Path = file_path
+    def __init__(self, file_path: Path | str) -> None:
+        self.file_path: Path = Path(file_path)
 
     def load(self) -> dict | list:
         """loads data from json file"""
         with open(self.file_path, "r", encoding="UTF-8") as data_file:
             return json.load(data_file)
 
-    def dump(self, _data: dict | list, indent: int = 2) -> None:
+    def dump(self, data: dict | list, indent: int = 2) -> None:
         """dumps selected data to the file"""
         with open(self.file_path, "w", encoding="UTF-8") as data_file:
-            json.dump(_data, data_file, indent=indent)
+            json.dump(data, data_file, indent=indent)
 
 
 esplayersdata = JsonFile(ESPLAYERSDATAPATH)
