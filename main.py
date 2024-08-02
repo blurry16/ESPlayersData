@@ -78,10 +78,10 @@ if __name__ == "__main__":
     print()
 
     githubdata: dict = json.loads(requests.get(ESPLAYERSDATAGITHUBURL).text)
-    if "--push" not in argv and "-p" not in argv and data != githubdata:
-        print(f"{Fore.GREEN}Data was updated. It's ready to be pushed!")
+    if "--commit" not in argv and "-c" not in argv and data != githubdata:
+        print(f"{Fore.GREEN}Data was updated. It's ready to be commited!")
 
-    elif ("--push" in argv or "-p" in argv) and data != githubdata:
+    elif ("--commit" in argv or "-c" in argv) and data != githubdata:
         with open(COMMITCOUNTERPATH, "r") as file:
             count = int(file.read())
         with open(COMMITCOUNTERPATH, "w") as file:
@@ -90,8 +90,7 @@ if __name__ == "__main__":
             f'cd {os.curdir} '
             f'&& git add {ESPLAYERSDATAPATH} '
             f'&& git add {COMMITCOUNTERPATH} '
-            f'&& git commit -m "es_players_data.json update №{open(COMMITCOUNTERPATH, "r").read()}" '
-            f'&& git push'
+            f'&& git commit -m "es_players_data.json update №{open(COMMITCOUNTERPATH, "r").read()}"'
         )
     else:
         print(f"{Fore.RED}The data on GitHub is already up to date.")

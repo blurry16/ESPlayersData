@@ -21,8 +21,8 @@ Clone the repository and do `pip install -r requirements.txt`.
     There are only 2 args in there:
     <h4> -u || --update || --upd </h4>
     Updates data and dumps it into file at ESPLAYERSDATAPATH.
-    <h4> -p || --push </h4>
-    Push the file update at ESPLAYERSDATAPATH on GitHub.  Comment is "es_players_data.json update №X" by default.
+    <h4> -c || --commit </h4>
+    Commits the update at ESPLAYERSDATAPATH. Comment is "es_players_data.json update №X" by default.
     <h4> -nc || --no-cooldown </h4> 
     Removes cooldown while updating. Works only with --update.
 </details>
