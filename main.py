@@ -90,7 +90,8 @@ if __name__ == "__main__":
             f'cd {os.curdir} '
             f'&& git add {ESPLAYERSDATAPATH} '
             f'&& git add {COMMITCOUNTERPATH} '
-            f'&& git commit -m "es_players_data.json update №{open(COMMITCOUNTERPATH, "r").read()}"'
+            f'&& git commit -m "es_players_data.json update №{open(COMMITCOUNTERPATH, "r").read()}" '
+            f'{"&& git push" if "--push" in argv or "-p" in argv else ""}'
         )
     else:
         print(f"{Fore.RED}The data on GitHub is already up to date.")
