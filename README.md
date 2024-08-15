@@ -20,18 +20,14 @@ Clone the repository and do `pip install -r requirements.txt`.
 
 There are only 2 args in there.gpy
 
-#### -u || --update || --upd </h4>
+#### -u || --update || --upd
 
 Updates data and dumps it into file at ESPLAYERSDATAPATH.
 
-#### -c || --commit </h4>
+#### -p || --push
 
-Commits the update at ESPLAYERSDATAPATH. Comment is "es_players_data.json update №X" by default.
+Commits and pushes updated data on GitHub.
 
-#### -nc || --no-cooldown </h4>
+#### -nc || --no-cooldown
 
 Removes cooldown while updating. Works only with --update.
-
-#### -p || --push </h4>
-
-Literally `git push`. Works only with --commit.
