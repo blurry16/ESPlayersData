@@ -68,7 +68,7 @@ async def update_data() -> None:
             content=content
         )
         updates += 1
-        print(content)
+        print(f"\n{content}\n")
         if "-c" in argv or "--copy" in argv:
             clipboard.copy(content)
             print(f"{Fore.GREEN}The content was successfully copied to your clipboard.")
