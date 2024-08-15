@@ -26,8 +26,13 @@ Updates data and dumps it into file at ESPLAYERSDATAPATH.
 
 #### -p || --push
 
-Commits and pushes updated data on GitHub.
+Commits and push updated data on GitHub.
 
 #### -nc || --no-cooldown
 
 Removes cooldown while updating. Works only with --update.
+
+### --copy || -c in bot.py
+
+Copies updated content to your clipboard.
+It was added since it may be annoying to always get your clipboard cleared while doing other stuff.

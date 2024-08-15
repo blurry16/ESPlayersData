@@ -1,6 +1,8 @@
 import json
 import time
+from sys import argv
 
+import clipboard
 import disnake
 import mojang
 import requests
@@ -13,6 +15,8 @@ COUNTCHANNELID: int = 0  # ID of "X players in ES" channel
 MEMBERLISTID: int = 0  # ID of member list channel
 MEMBERLISTMESSAGEID: int = 0  # ID of member list message
 ROLEID: int = 0  # ID of the role with permission to force updates
+
+argv = [arg.lower() for arg in argv]
 
 init(autoreset=True)
 
@@ -55,13 +59,19 @@ async def update_data() -> None:
             print(f"[{index + 1}/{len(uuids)}] {uuid} -> {Fore.GREEN}{username}")
         del username, index, uuid
         tojoin = "\n".join(sorted(names))
+        content = (f"{len(uuids)} players\n```\n{tojoin}\n```\nUpdated <t:{int(time.time())}:R>"
+                   f" (<t:{int(time.time())}:f>)\n"
+                   f"[GitHub repo](https://github.com/blurry16/ESPlayersData)")
         await bot.get_channel(MEMBERLISTID).get_partial_message(
             MEMBERLISTMESSAGEID
         ).edit(
-            content=f"```\n{tojoin}\n```\nUpdated <t:{int(time.time())}:R> (<t:{int(time.time())}:f>)\n"
-                    f"[GitHub repo](https://github.com/blurry16/ESPlayersData)"
+            content=content
         )
         updates += 1
+        print(content)
+        if "-c" in argv or "--copy" in argv:
+            clipboard.copy(content)
+            print(f"{Fore.GREEN}The content was successfully copied to your clipboard.")
         print(
             f"{Fore.GREEN}Data successfully updated at {int(time.time())}. "
             f"In sum {updates} update{'s' if updates > 1 else ''} ha{'ve' if updates > 1 else 's'} taken place."
