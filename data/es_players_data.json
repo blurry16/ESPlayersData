@@ -677,5 +677,12 @@
     "skin_variant": "classic",
     "cape_url": "http://textures.minecraft.net/texture/afd553b39358a24edfe3b8a9a939fa5fa4faa4d9a9c3d6af8eafb377fa05c2bb",
     "skin_url": "http://textures.minecraft.net/texture/fd66d158de084e3bfaa562925ae580d00dfdbaf8ec384d2f0dba2c297461a4a2"
+  },
+  "e75c252005b34723aae82fb8caf52486": {
+    "id": "e75c252005b34723aae82fb8caf52486",
+    "name": "dergyderg",
+    "skin_variant": "classic",
+    "cape_url": null,
+    "skin_url": "http://textures.minecraft.net/texture/f430e0716922da2397a74bf1e0134b4d620fb1e2d5b96b65ded004c7496508cd"
   }
 }
