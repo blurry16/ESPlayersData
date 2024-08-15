@@ -18,7 +18,7 @@ Clone the repository and do `pip install -r requirements.txt`.
 
 ### main.py args
 
-There are only 2 args in there.
+There are only 2 args in there.gpy
 
 #### -u || --update || --upd </h4>
 
