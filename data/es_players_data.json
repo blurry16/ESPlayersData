@@ -53,7 +53,7 @@
     "name": "MamaCheckers",
     "skin_variant": "slim",
     "cape_url": null,
-    "skin_url": "http://textures.minecraft.net/texture/48852b7838fe658fc564e5ed4d55d792de0f81473217f60eac29227fea44a226"
+    "skin_url": "http://textures.minecraft.net/texture/a7da6cabeb8ec9146684eb86311116ac3f4bcb8ee2777b9ec4ef3df190ba822"
   },
   "0c217e9b48574e51b7b713c2d7107c9b": {
     "id": "0c217e9b48574e51b7b713c2d7107c9b",
@@ -122,8 +122,8 @@
     "id": "348228a026b54a319918dc0d452f21c0",
     "name": "PookieCrafter",
     "skin_variant": "slim",
-    "cape_url": "http://textures.minecraft.net/texture/afd553b39358a24edfe3b8a9a939fa5fa4faa4d9a9c3d6af8eafb377fa05c2bb",
-    "skin_url": "http://textures.minecraft.net/texture/e4eb78f8052d84c60b82c52bc7f6df51b82f2b24f9baa5732ba5836a3ffa4feb"
+    "cape_url": "http://textures.minecraft.net/texture/56c35628fe1c4d59dd52561a3d03bfa4e1a76d397c8b9c476c2f77cb6aebb1df",
+    "skin_url": "http://textures.minecraft.net/texture/791e4a482fc668d7c352c13b75909f701a8584f85353391626fbcca7cf401ee6"
   },
   "a9c47d52a71a4b5580bc120894b69d0b": {
     "id": "a9c47d52a71a4b5580bc120894b69d0b",
@@ -368,7 +368,7 @@
     "name": "LoganDaNinja",
     "skin_variant": "classic",
     "cape_url": "http://textures.minecraft.net/texture/cd9d82ab17fd92022dbd4a86cde4c382a7540e117fae7b9a2853658505a80625",
-    "skin_url": "http://textures.minecraft.net/texture/fd0f9e2c296a3349a876c9947ae2d2315e9f2a52ef6d34888ff0af105809939b"
+    "skin_url": "http://textures.minecraft.net/texture/fd58a83a50ddf8804d4ea340691d1a1a3cd2c7c42c108ca033ce5aacb70f4adc"
   },
   "a0eb2a65eb5540da8a829a955a1b7aa4": {
     "id": "a0eb2a65eb5540da8a829a955a1b7aa4",
@@ -444,7 +444,7 @@
     "id": "ee8ddd562c574872933e582c928acc00",
     "name": "zzTrepid749_",
     "skin_variant": "slim",
-    "cape_url": null,
+    "cape_url": "http://textures.minecraft.net/texture/56c35628fe1c4d59dd52561a3d03bfa4e1a76d397c8b9c476c2f77cb6aebb1df",
     "skin_url": "http://textures.minecraft.net/texture/37462be993eb60a64c5a6a7250a7ea2a6577ea82d1635405d5427f79deb1654a"
   },
   "4566c69b8557440a82330d9f2e599e94": {
@@ -473,7 +473,7 @@
     "name": "SkyButNo",
     "skin_variant": "classic",
     "cape_url": null,
-    "skin_url": "http://textures.minecraft.net/texture/ebee9fef76c1e6d22cb066d36c31e6f664100d82f726a3c091ff1704962d39e4"
+    "skin_url": "http://textures.minecraft.net/texture/d2d8c7042943ee8bc95e835827d4b09ac9df4d0250f4afd201a9d07cafc1a47a"
   },
   "6559837802d94e2b9439a817dc2992f3": {
     "id": "6559837802d94e2b9439a817dc2992f3",
