@@ -1,6 +1,5 @@
 import json
 import time
-import typing
 from sys import argv
 
 import clipboard
@@ -46,14 +45,9 @@ async def update(inter: disnake.ApplicationCommandInteraction) -> None:
             await inter.send("Update was forced successfully!", ephemeral=True)
             await update_data()
         except disnake.errors.InteractionTimedOut:
-            print(f"{Fore.RED}{inter.author} timed out trying to update {int(time.time())}.")
+            print(f"{Fore.RED}{inter.author} timed out trying to update at {int(time.time())}.")
     else:
         await inter.send("Not enough permissions.", ephemeral=True)
-
-
-async def async_iter(iterable: typing.Iterable) -> typing.Generator[typing.Any, None, None]:
-    for index, i in enumerate(iterable):
-        yield index, i
 
 
 async def update_data() -> None:
@@ -61,14 +55,19 @@ async def update_data() -> None:
         global updates
         uuids = json.loads(requests.get(JSONRAWURL).text)
         await bot.get_channel(COUNTCHANNELID).edit(name=f"{len(uuids)} players in ES")
+        await bot.get_channel(MEMBERLISTID).get_partial_message(
+            MEMBERLISTMESSAGEID
+        ).edit(content=f"{len(uuids)} players in ES\n"
+                       f"Updating... Started <t:{int(time.time())}:R> (<t:{int(time.time())}:f>)\n"
+                       f"[GitHub repo](https://github.com/blurry16/ESPlayersData)")
         names = []
-        async for index, uuid in async_iter(uuids):
+        for index, uuid in enumerate(uuids):
             username = mapi.get_username(uuid)
             names.append(username)
             print(f"[{index + 1}/{len(uuids)}] {uuid} -> {Fore.GREEN}{username}")
         del username, index, uuid
         tojoin = "\n".join(sorted(names))
-        content = (f"{len(uuids)} players\n```\n{tojoin}\n```\nUpdated <t:{int(time.time())}:R>"
+        content = (f"{len(uuids)} players in ES\n```\n{tojoin}\n```\nUpdated <t:{int(time.time())}:R>"
                    f" (<t:{int(time.time())}:f>)\n"
                    f"[GitHub repo](https://github.com/blurry16/ESPlayersData)")
         await bot.get_channel(MEMBERLISTID).get_partial_message(
