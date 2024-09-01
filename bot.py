@@ -58,7 +58,8 @@ async def update_data() -> None:
         await bot.get_channel(MEMBERLISTID).get_partial_message(
             MEMBERLISTMESSAGEID
         ).edit(content=f"{len(uuids)} players in ES\n"
-                       f"Updating... Started <t:{int(time.time())}:R> (<t:{int(time.time())}:f>)\n"
+                       f"Updating... Started <t:{int(time.time())}:R> (<t:{int(time.time())}:f>)\n" +
+                       ("100 reached on 1st September 2024 :tada:\n" if "--no-stats" not in argv else "") +
                        f"[GitHub repo](https://github.com/blurry16/ESPlayersData)")
         names = []
         for index, uuid in enumerate(uuids):
@@ -68,7 +69,8 @@ async def update_data() -> None:
         del username, index, uuid
         tojoin = "\n".join(sorted(names))
         content = (f"{len(uuids)} players in ES\n```\n{tojoin}\n```\nUpdated <t:{int(time.time())}:R>"
-                   f" (<t:{int(time.time())}:f>)\n"
+                   f" (<t:{int(time.time())}:f>)\n" +
+                   ("100 reached on 1st September 2024 :tada:\n" if "--no-stats" not in argv else "") +
                    f"[GitHub repo](https://github.com/blurry16/ESPlayersData)")
         await bot.get_channel(MEMBERLISTID).get_partial_message(
             MEMBERLISTMESSAGEID
