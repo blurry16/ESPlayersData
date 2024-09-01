@@ -18,8 +18,6 @@ Clone the repository and do `pip install -r requirements.txt`.
 
 ### main.py args
 
-There are only 3 args in there.gpy
-
 #### -u || --update || --upd
 
 Updates data and dumps it into file at ESPLAYERSDATAPATH.
@@ -32,7 +30,13 @@ Commits and push updated data on GitHub.
 
 Removes cooldown while updating. Works only with --update.
 
-### --copy || -c in bot.py
+### bot.py args
+
+#### -c || --copy
 
 Copies updated content to your clipboard.
 It was added since it may be annoying to always get your clipboard cleared while doing other stuff.
+
+#### --no-stats
+
+Removes stats lines.
