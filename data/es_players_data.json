@@ -18,7 +18,7 @@
     "name": "Dragon_KittyPaws",
     "skin_variant": "classic",
     "cape_url": null,
-    "skin_url": "http://textures.minecraft.net/texture/fc9f35048da822303e3afd47fdfb2835845edf6aa7b15bfdca5ff7914bbe7131"
+    "skin_url": "http://textures.minecraft.net/texture/9cf4dd530b64051bfde3d8fd64518e5946415d6b1dd1968611766c7650101106"
   },
   "e9fd6719be254ac88f0b1ee23e2bcbd6": {
     "id": "e9fd6719be254ac88f0b1ee23e2bcbd6",
@@ -206,7 +206,7 @@
     "id": "3b0493dcf64c48f9b11702d3dfbc8214",
     "name": "vip2kea",
     "skin_variant": "classic",
-    "cape_url": "http://textures.minecraft.net/texture/56c35628fe1c4d59dd52561a3d03bfa4e1a76d397c8b9c476c2f77cb6aebb1df",
+    "cape_url": "http://textures.minecraft.net/texture/f9a76537647989f9a0b6d001e320dac591c359e9e61a31f4ce11c88f207f0ad4",
     "skin_url": "http://textures.minecraft.net/texture/70cdf09dad85cd20ae1447422784547c00a8cf85db88aab594567c58e2f75a91"
   },
   "996ccf7765534d2c9c179bd58215ed14": {
@@ -298,7 +298,7 @@
     "name": "Cherilee",
     "skin_variant": "slim",
     "cape_url": null,
-    "skin_url": "http://textures.minecraft.net/texture/6b84001b6b5476e58ab4c8e81fd6031afa2539823b589cb0eb336afefc2267"
+    "skin_url": "http://textures.minecraft.net/texture/1758ae830030ffa614450d7a5f96e4a311f80ad350fd389d1685ad0adfe6459"
   },
   "47c7823e725546f49f8f36a32c26594b": {
     "id": "47c7823e725546f49f8f36a32c26594b",
@@ -382,7 +382,7 @@
     "name": "PartyGreyson",
     "skin_variant": "slim",
     "cape_url": "http://textures.minecraft.net/texture/cd9d82ab17fd92022dbd4a86cde4c382a7540e117fae7b9a2853658505a80625",
-    "skin_url": "http://textures.minecraft.net/texture/3ba26918345fa19644e88a9bbf48deeb18f10902dee5e069107c75ef3d10a510"
+    "skin_url": "http://textures.minecraft.net/texture/eab98464d9396d72b2457de52424bd3d78015370b9aefe220c448de741d9da39"
   },
   "e01b73dfc9914332b62472b13abd6702": {
     "id": "e01b73dfc9914332b62472b13abd6702",
@@ -402,8 +402,8 @@
     "id": "793ba790fd4943f0b4ca8f8aeb168ddd",
     "name": "TsoMein",
     "skin_variant": "slim",
-    "cape_url": "http://textures.minecraft.net/texture/afd553b39358a24edfe3b8a9a939fa5fa4faa4d9a9c3d6af8eafb377fa05c2bb",
-    "skin_url": "http://textures.minecraft.net/texture/8dffd55491256274c99807a6105868924e7d901d0593674200ef0d5d0d98ecfd"
+    "cape_url": null,
+    "skin_url": "http://textures.minecraft.net/texture/5e1221df1b898e038a5922bca29e157e24303b5c8c951c06c3f4ef2546ac4f73"
   },
   "77018a299d8c439c88d2feb30ae8d2d3": {
     "id": "77018a299d8c439c88d2feb30ae8d2d3",
@@ -611,9 +611,9 @@
   "25ed1d6b4c8d4e51a7d634d5da3a1af0": {
     "id": "25ed1d6b4c8d4e51a7d634d5da3a1af0",
     "name": "ThatCrazyManiac",
-    "skin_variant": "classic",
+    "skin_variant": "slim",
     "cape_url": null,
-    "skin_url": "http://textures.minecraft.net/texture/3854c89a5623f42ea5f2ccad6d80d9eeb01bc2097399e1e4756c9f0fa0900b86"
+    "skin_url": "http://textures.minecraft.net/texture/fc723729365f2ccde4e59fea0d757a73eaa65d3a2e38c31d5e5b3fd419d5a206"
   },
   "016d533228704df3baa10fcee5254cb2": {
     "id": "016d533228704df3baa10fcee5254cb2",
@@ -627,7 +627,7 @@
     "name": "Heidsy",
     "skin_variant": "classic",
     "cape_url": "http://textures.minecraft.net/texture/2340c0e03dd24a11b15a8b33c2a7e9e32abb2051b2481d0ba7defd635ca7a933",
-    "skin_url": "http://textures.minecraft.net/texture/3480efd6ac4cb2065b83a8ee7f5188b991402cccec3a2f005db6b6aa0a8d4fc7"
+    "skin_url": "http://textures.minecraft.net/texture/1e5f78f3a6b4231ca59d65b974ff24b8e2a79ca8e13ad619117ed1e0362e8454"
   },
   "a84d8740746a4cd88233e8b03c3bcc73": {
     "id": "a84d8740746a4cd88233e8b03c3bcc73",
@@ -690,7 +690,7 @@
     "name": "Vecci0",
     "skin_variant": "classic",
     "cape_url": "http://textures.minecraft.net/texture/2340c0e03dd24a11b15a8b33c2a7e9e32abb2051b2481d0ba7defd635ca7a933",
-    "skin_url": "http://textures.minecraft.net/texture/ea0052dc0890581a4635c89be5ecb50f9d0144180293693fd7ef41a874864e0f"
+    "skin_url": "http://textures.minecraft.net/texture/15138af7d09bfd705a6946884f628946b0d605df7c3bba4b128535e63330765d"
   },
   "470b7302f9694837af6b5f993ef82c51": {
     "id": "470b7302f9694837af6b5f993ef82c51",
