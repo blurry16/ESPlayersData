@@ -6,7 +6,7 @@ I
 removed comments from there and now this software should work perfectly.  
 I coded this thing when I wanted to make a sorted list of Emerald Shores players.  
 UUID can be obtained through Mojang API or NameMC. Use whatever you want.
-Old versions can be obtained at github.com/blurry16/MCDataCollector commits history.
+Old versions can be obtained at [github.com/blurry16/MCDataCollector](https://github.com/blurry16/MCDataCollector) commits history.
 
 ### How do you add new players to member-list?
 
