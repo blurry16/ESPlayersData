@@ -1,3 +1,4 @@
+# Imports
 import json
 import os
 import time
@@ -35,21 +36,24 @@ class JsonFile:
             json.dump(data, data_file, indent=indent)
 
 
-esplayersdata = JsonFile(ESPLAYERSDATAPATH)
-uuids = json.loads(requests.get(UUIDSURL).text)
+# I believe that JsonFile class is already understandable, since it's written as simple as possible >.<
 
-argv = [i.lower() for i in argv]
+
+esplayersdata = JsonFile(ESPLAYERSDATAPATH)  # Init main jsonfile object
+uuids = json.loads(requests.get(UUIDSURL).text)  # get uuid via get request
+
+argv = [i.lower() for i in argv]  # Format args
 
 if __name__ == "__main__":
 
-    init(autoreset=True)
+    init(autoreset=True)  # Init colorama
 
-    mapi = API()
-    data = esplayersdata.load()
+    mapi = API()  # Init Mojang API
+    data = esplayersdata.load()  # load data
 
-    if "--update" in argv or "--upd" in argv or "-u" in argv:
+    if "--update" in argv or "--upd" in argv or "-u" in argv:  # update section
         length = len(uuids)
-        for index, i in enumerate(uuids):
+        for index, i in enumerate(uuids):  # iterating through uuids and getting profiles
             profile = mapi.get_profile(i)
             data[profile.id] = {
                 "id": profile.id,
@@ -58,16 +62,21 @@ if __name__ == "__main__":
                 "cape_url": profile.cape_url,
                 "skin_url": profile.skin_url,
             }
+
+            # Logging
             print(f"{Fore.GREEN}{profile.name} updated. [{index + 1}/{length}]")
             print(json.dumps(data[profile.id], indent=2))
             print("\n")
-            time.sleep(0 if "--no-cooldown" in argv or "-nc" in argv else 0.25)
+
+            time.sleep(0 if "--no-cooldown" in argv or "-nc" in argv else 0.25)  # sleep if no arg given
         del length
-        esplayersdata.dump(data)
-        print(f"{Back.GREEN}Successfully dumped data in {esplayersdata.file_path}")
-    data: dict = esplayersdata.load()
-    names = [data[i]["name"] for i in data]
-    uuids_upd_dict = {data[i]["name"]: data[i]["id"] for i in data}
+        esplayersdata.dump(data)  # dump data
+        print(f"{Back.GREEN}Successfully dumped data in {esplayersdata.file_path}")  # logging
+    data: dict = esplayersdata.load()  # load data. again
+    names = [data[i]["name"] for i in data]  # get names only
+    uuids_upd_dict = {data[i]["name"]: data[i]["id"] for i in data}  # get 'name: uuid' dict
+
+    # Logging
     print(json.dumps(data, indent=2))
     print("\n".join(sorted(names)))
     print(names, end="\n" * 2)
@@ -77,15 +86,19 @@ if __name__ == "__main__":
         print(f"{uuids_upd_dict[name]}: {name}")
     print()
 
-    githubdata: dict = json.loads(requests.get(ESPLAYERSDATAGITHUBURL).text)
-    if "--push" not in argv and "-p" not in argv and data != githubdata:
+    githubdata: dict = json.loads(requests.get(ESPLAYERSDATAGITHUBURL).text)  # get data from github
+    if "--push" not in argv and "-p" not in argv and data != githubdata:  # no push & data updated section
         print(f"{Fore.GREEN}Data was updated. It's ready to be pushed!")
 
-    elif ("--push" in argv or "-p" in argv) and data != githubdata:
+    elif ("--push" in argv or "-p" in argv) and data != githubdata:  # push section & data updated
+
+        # count commit (just simply +1 to what's written in file)
         with open(COMMITCOUNTERPATH, "r") as file:
             count = int(file.read())
         with open(COMMITCOUNTERPATH, "w") as file:
             file.write(str(count + 1))
+
+        # Git commands
         os.system(
             f'cd {os.curdir} '
             f'&& git add {ESPLAYERSDATAPATH} '
@@ -93,8 +106,10 @@ if __name__ == "__main__":
             f'&& git commit -m "es_players_data.json update №{open(COMMITCOUNTERPATH, "r").read()}" '
             f'&& git push'
         )
-    else:
+    else:  # Data not updated section or (not updated | push)
         print(f"{Fore.RED}The data on GitHub is already up to date.")
+
+    # Logging
     print(f"\nBy GitHub RAW file, {Fore.GREEN + requests.get(url=COMMITCOUNTERURL).text + Fore.RESET} "
           f"updates of es_players_data.json have taken place.")
     print(f"By local file, {Fore.GREEN + open(COMMITCOUNTERPATH, 'r').read() + Fore.RESET} "
