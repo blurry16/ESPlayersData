@@ -62,7 +62,7 @@ async def update_data() -> None:
         global updates  # Globalising updates counter variable
         uuids = json.loads(requests.get(JSONRAWURL).text)  # Loading uuids via JSON hosted somewhere (GitHub)
         await (bot.get_channel(COUNTCHANNELID)
-               .edit(name=f"{len(uuids)} players in ES"))   # Editing channel name to the actual number of players
+               .edit(name=f"{len(uuids)} players in ES"))  # Editing channel name to the actual number of players
         await bot.get_channel(MEMBERLISTID).get_partial_message(
             MEMBERLISTMESSAGEID
         ).edit(content=f"{len(uuids)} players in ES\n"
