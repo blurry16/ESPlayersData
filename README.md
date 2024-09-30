@@ -6,23 +6,17 @@ I
 removed comments from there and now this software should work perfectly.  
 I coded this thing when I wanted to make a sorted list of Emerald Shores players.  
 UUID can be obtained through Mojang API or NameMC. Use whatever you want.
-Old versions can be obtained 
-at [github.com/blurry16/MCDataCollector](https://github.com/blurry16/MCDataCollector) commits history.
-
-### In a nutshell
-
-main.py file updates data with given UUIDs. 
-bot.py generates slay discord messages with alphabetic sorted nicknames list (also using UUIDs file).
-
-### Requirements
-
-Clone the repository and do `pip install -r requirements.txt`.
+Old versions can be obtained at github.com/blurry16/MCDataCollector commits history.
 
 ### How do you add new players to member-list?
 
 So, at least for now you will have to put player's UUID in the uuids.json file.  
 Fork the repository, edit the file, and pull request updated version of the file.  
 Bot uses the file hosted on GitHub.
+
+### Requirements
+
+Clone the repository and do `pip install -r requirements.txt`.
 
 ### main.py args
 
