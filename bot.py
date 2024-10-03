@@ -1,7 +1,7 @@
 # Imports
 import json
 import time
-from sys import argv
+from sys import argv  # argv are arguments given via CLI
 
 import disnake
 import mojang
