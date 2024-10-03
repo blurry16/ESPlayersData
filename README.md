@@ -34,7 +34,7 @@ Removes cooldown while updating. Works only with --update.
 
 ### bot.py args
 
-#### -c || --copy
+#### -cc || --copy
 
 Copies updated content to your clipboard.
 It was added since it may be annoying to always get your clipboard cleared while doing other stuff.

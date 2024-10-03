@@ -3,10 +3,10 @@ import json
 import time
 from sys import argv
 
-import clipboard
 import disnake
 import mojang
 import requests
+from clipboard import copy as cbcopy  # cb stands for clipboard
 from colorama import init, Fore
 from disnake.ext import commands, tasks
 
@@ -89,8 +89,8 @@ async def update_data() -> None:
         )  # Editing the member list message with the content
         updates += 1  # Increasing the update counter
         print(f"\n{content}\n")  # Logging
-        if "-c" in argv or "--copy" in argv:  # checking if the content should be copied the clipboard
-            clipboard.copy(content)  # copying the content to the clipboard
+        if "-cc" in argv or "--copy" in argv:  # checking if the content should be copied the clipboard
+            cbcopy(content)  # copying the content to the clipboard
             print(f"{Fore.GREEN}The content was successfully copied to your clipboard.")  # Logging
         print(
             f"{Fore.GREEN}Data successfully updated at {int(time.time())}. "
