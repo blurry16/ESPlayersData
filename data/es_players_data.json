@@ -10,8 +10,8 @@
     "id": "e2cc4960bead4748baa7b25c86ab736d",
     "name": "cagedFALC0N",
     "skin_variant": "classic",
-    "cape_url": "http://textures.minecraft.net/texture/f9a76537647989f9a0b6d001e320dac591c359e9e61a31f4ce11c88f207f0ad4",
-    "skin_url": "http://textures.minecraft.net/texture/cee317282976f97921d7d77ab19b1cddcbee8f1d4b216267385e5a1727f73e47"
+    "cape_url": "http://textures.minecraft.net/texture/2340c0e03dd24a11b15a8b33c2a7e9e32abb2051b2481d0ba7defd635ca7a933",
+    "skin_url": "http://textures.minecraft.net/texture/de20624696dc71d619aee9f299240d6087ff0430b78787d02f51467f1cb169ef"
   },
   "afcdd440b5cb457490ebaf3ec54f1cff": {
     "id": "afcdd440b5cb457490ebaf3ec54f1cff",
@@ -200,7 +200,7 @@
     "name": "vic_torus",
     "skin_variant": "slim",
     "cape_url": null,
-    "skin_url": "http://textures.minecraft.net/texture/fd22b1bd5b0b4a4d3824ecaeabb11285f8a908c36a8f9db3deb6504fe1f898a9"
+    "skin_url": "http://textures.minecraft.net/texture/9842880906cd60d3c9ce8b883af1c9c2a120eb4359050af5c7196041ebcb091d"
   },
   "3b0493dcf64c48f9b11702d3dfbc8214": {
     "id": "3b0493dcf64c48f9b11702d3dfbc8214",
@@ -256,7 +256,7 @@
     "name": "SeaOfStarsWulf",
     "skin_variant": "slim",
     "cape_url": null,
-    "skin_url": "http://textures.minecraft.net/texture/1d6ec8cb52caf67255ffdc6e13ba83c943c1410b045e92d8b0ac6202239e97b0"
+    "skin_url": "http://textures.minecraft.net/texture/8a37e6ad7368f3100186ff5c398ae629da9b074e0fa48b9b9e6a2888ee25df50"
   },
   "774aa89977324855aa23bbbe4a6333b6": {
     "id": "774aa89977324855aa23bbbe4a6333b6",
@@ -366,7 +366,7 @@
   "7677395cde4b429f9d06f375df193148": {
     "id": "7677395cde4b429f9d06f375df193148",
     "name": "LoganDaNinja",
-    "skin_variant": "classic",
+    "skin_variant": "slim",
     "cape_url": "http://textures.minecraft.net/texture/cd9d82ab17fd92022dbd4a86cde4c382a7540e117fae7b9a2853658505a80625",
     "skin_url": "http://textures.minecraft.net/texture/d7841f2a45a26f7127a1b09d38c6fd75cca6caaef9a6659d94c2590e3a9aa5c"
   },
@@ -578,7 +578,7 @@
     "name": "Footl00se",
     "skin_variant": "classic",
     "cape_url": null,
-    "skin_url": "http://textures.minecraft.net/texture/b773b6c00d646a1b13482138413339d4e4cb97ed312d9138b8f6ef097ca4cbaf"
+    "skin_url": "http://textures.minecraft.net/texture/f390711c4d4cad5d6ed5f2c4cb5e688453f5793c1c19b574e059631f46c8eb98"
   },
   "b06117b71eb24bfa80f1c8abce6776d4": {
     "id": "b06117b71eb24bfa80f1c8abce6776d4",
@@ -613,7 +613,7 @@
     "name": "ThatCrazyManiac",
     "skin_variant": "slim",
     "cape_url": null,
-    "skin_url": "http://textures.minecraft.net/texture/75a8c937b58f988660986ca352290c0e453f867643680324c15dddfef92b3428"
+    "skin_url": "http://textures.minecraft.net/texture/fc723729365f2ccde4e59fea0d757a73eaa65d3a2e38c31d5e5b3fd419d5a206"
   },
   "016d533228704df3baa10fcee5254cb2": {
     "id": "016d533228704df3baa10fcee5254cb2",
@@ -627,7 +627,7 @@
     "name": "Heidsy",
     "skin_variant": "classic",
     "cape_url": "http://textures.minecraft.net/texture/2340c0e03dd24a11b15a8b33c2a7e9e32abb2051b2481d0ba7defd635ca7a933",
-    "skin_url": "http://textures.minecraft.net/texture/62e1940995f49b04cc4856ff60c8eefa2094fe834d4b8b186777df27f886160a"
+    "skin_url": "http://textures.minecraft.net/texture/aeb26dbb18093031fdb793d6c888b96859accff196ff6c83a3ceef8159fd1a4d"
   },
   "a84d8740746a4cd88233e8b03c3bcc73": {
     "id": "a84d8740746a4cd88233e8b03c3bcc73",
@@ -690,13 +690,20 @@
     "name": "Vecci0",
     "skin_variant": "classic",
     "cape_url": "http://textures.minecraft.net/texture/2340c0e03dd24a11b15a8b33c2a7e9e32abb2051b2481d0ba7defd635ca7a933",
-    "skin_url": "http://textures.minecraft.net/texture/15138af7d09bfd705a6946884f628946b0d605df7c3bba4b128535e63330765d"
+    "skin_url": "http://textures.minecraft.net/texture/f8fcd1e8c404f17f804dbccf4895073963dcbd2f5b89040b22977d5078033a79"
   },
   "470b7302f9694837af6b5f993ef82c51": {
     "id": "470b7302f9694837af6b5f993ef82c51",
     "name": "_skye15",
     "skin_variant": "slim",
     "cape_url": null,
-    "skin_url": "http://textures.minecraft.net/texture/f30487959a3be753e5a29a8a38a72528ca04de91d06c4c139df902f569b5a1e2"
+    "skin_url": "http://textures.minecraft.net/texture/2289646f0dfa536a2edec3e930aa40fbe563afa37a5d1187d5cd89edb5a0c77d"
+  },
+  "45b62df0028b4fd4af8e29763ceb9ee9": {
+    "id": "45b62df0028b4fd4af8e29763ceb9ee9",
+    "name": "galaxy_infinity",
+    "skin_variant": "slim",
+    "cape_url": null,
+    "skin_url": "http://textures.minecraft.net/texture/46acd06e8483b176e8ea39fc12fe105eb3a2a4970f5100057e9d84d4b60bdfa7"
   }
 }
