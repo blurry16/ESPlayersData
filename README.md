@@ -1,10 +1,7 @@
 # This repo is archived due to the end of CV7.
 Emerald Shores was a great project, and I'm thrilled that I was involved in it. 
 Thanks to everybody who has contributed to it.  
-This repository was my small contribution, simple sorted member list. Good luck and see you again, nubs!  
-
-_Archived by blurry16 on October 19, 2024_  
-_Copyright (c) 2024 blurry16, licensed under MIT._
+This repository was my small contribution, simple sorted member list. Good luck and see you again, nubs!
 
 # ESPlayersData ![](https://img.shields.io/github/last-commit/blurry16/ESPlayersData?path=data%2Fuuids.json&label=new%20player%20to%20ES) ![](https://img.shields.io/github/last-commit/blurry16/ESPlayersData?path=data%2Fes_players_data.json&label=last%20commit%20to%20es_players_data.json)
 
